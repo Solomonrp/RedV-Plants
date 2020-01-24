@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import Home from './components/home'
+import Survey from './components/survey';
+import Survey2 from './components/survey2';
+import Survey3 from './components/survey3';
+import List from './components/listall';
+import OneItem from './components/one';
 import './App.css';
 import axios from 'axios';
 
@@ -33,7 +38,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home changeState={this.changeState} api={this.callApi} data={this.state.allPlants} />
+        <Switch>
+          <Route exact path='/' render={()=><Home changeState={this.changeState} api={this.callApi} data={this.state.allPlants} />}/>
+          <Route path='/survey' render={() => <Survey changeState={this.changeState} escolha={'teste props 1'} />} />
+          <Route path='/survey2' render={() => <Survey2 changeState={this.changeState} escolha={'teste props 2'} />} />
+          <Route path='/survey3' render={() => <Survey3 changeState={this.changeState} escolha={'teste props 3'} api={this.props.api} />} />
+          <Route path='/all' render={() => <List data={this.props.data} api={this.props.api} />} />
+          <Route path='/one/:id' render={(props) => <OneItem {...props} />} />
+        </Switch>
       </div>
     )
   }
