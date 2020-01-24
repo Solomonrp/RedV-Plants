@@ -44,9 +44,9 @@ class Survey extends Component {
           }
           {
             this.state.btnSelected === 'no' ?
-              <Button name='sun' image={MSun} value='media' touch={this.changeBtn} changeState={this.props.changeState}>Teste3</Button>
+              <Button name='sun' image={NSun} value='media' touch={this.changeBtn} changeState={this.props.changeState}>Teste3</Button>
               :
-              <Button name='sun' image={MSun} id='3' value='media' touch={this.changeBtn} changeState={this.props.changeState}>no</Button>
+              <Button name='sun' image={NSun} id='3' value='media' touch={this.changeBtn} changeState={this.props.changeState}>no</Button>
           }
         </div>
         <div className='Divnavigate'>
