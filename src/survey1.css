@@ -16,7 +16,7 @@ body {
 }
 
 
-.Divnavigate > a {
+/* .Divnavigate > a {
   margin: 50px 230px;
   text-decoration: none;
   border: 1px solid #15573F;
@@ -24,4 +24,29 @@ body {
   border-radius: 20px;
   padding: 10px 30px;
   font-size: 13px;
+} */
+  
+.Divnavigate > a {
+  height: 32px;
+  padding-left: 42px;
+  text-decoration: none;
+  border: 1px solid #15573F;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 10px 50px;
+  margin: 50px 179px;
+  color: #15573F;
+}
+
+.arrowBack {
+  background:url('./assets/arrow_direita.png') no-repeat 10px center;
+  cursor: pointer;
+  background-size: 28px;
+}
+
+.arroFront {
+  background:url('./assets/arrow_esquerda.png') no-repeat;
+  background-position: calc(100% - 10px) center;
+  cursor: pointer;
+  background-size: 28px;
 }

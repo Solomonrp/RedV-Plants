@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../style/oneplant.css'
-import HWSun from '../assets/icons/white/high-sun.svg';
-import LWSun from '../assets/icons/white/low-sun.svg';
-import NWSun from '../assets/icons/white/no-answer.svg';
-import HWDrops from '../assets/icons/white/three-drops.svg';
-import MWDrops from '../assets/icons/white/two-drops.svg';
-import NWDrops from '../assets/icons/white/one-drop.svg';
+import '../style/oneplant.css';
+import HWSun from '../assets/icons/grey/high-sun.png';
+import LWSun from '../assets/icons/grey/low-sun.png';
+import NWSun from '../assets/icons/grey/no-answer.svg';
+import HWDrops from '../assets/icons/grey/three-drops.png';
+import MWDrops from '../assets/icons/grey/two-drops.png';
+import NWDrops from '../assets/icons/grey/one-drop.png';
 import Dog from '../assets/icons/grey/pet.svg';
 import Toxic from '../assets/icons/grey/toxic.svg';
 import logo from '../assets/logo/logo-greenthumb.svg';

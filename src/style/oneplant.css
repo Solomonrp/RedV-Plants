@@ -82,11 +82,12 @@ body {
 }
 
 .ul_first_wrapper_son > li {
+  display: flex;
   margin: 10px 0px;
 }
 
 li > a {
-  vertical-align: super;
+  padding-top: 6px;
   padding-left: 10px;
   color: grey;
 }

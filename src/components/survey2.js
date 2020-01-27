@@ -56,8 +56,8 @@ class Survey2 extends Component {
         </div>
 
         <div className="Divnavigate">
-          <Link to='/survey'>Back</Link>
-          <Link to='/survey3'>Próximo</Link>
+          <Link to='/survey' className="arrowBack">Back</Link>
+          <Link to='/survey3' className="arroFront">Próximo</Link>
         </div>
 
         <Switch>

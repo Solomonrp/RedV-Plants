@@ -10,6 +10,7 @@ import MSun from '../assets/icons/coral/low-sun.svg';
 import MWSun from '../assets/icons/white/low-sun.svg';
 import NSun from '../assets/icons/coral/no-answer.svg';
 import NWSun from '../assets/icons/white/no-answer.svg';
+import Arrowl from '../assets/arrow_direita.png'
 
 class Survey extends Component {
 
@@ -53,8 +54,8 @@ class Survey extends Component {
           }
         </div>
         <div className='Divnavigate'>
-          <Link to='/'>Back</Link>
-          <Link to='/survey2'>Próximo
+          <Link to='/' className="arrowBack">Back</Link>
+          <Link to='/survey2' className="arroFront">Próximo
           </Link>
         </div>
 

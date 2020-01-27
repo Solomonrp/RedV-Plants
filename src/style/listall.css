@@ -8,7 +8,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 70px;
   margin-left: 250px;
-  margin-right: 250px;
+  /* margin-right: 250px; */
 }
 
 .as {
@@ -29,15 +29,23 @@ h1 {
   color: #15573F;
 }
 
-span {
+.plants_first_son > div > a {
   float:left; 
   color: #15573F;
   font-weight: bold;
-  margin: 10px 0px;
+  margin: 0px 15px;
 }
 
-span > span {
-  color: grey
+.plants_second_son {
+  float:left; 
+  color: #15573F;
+  margin: 10px 0px;
+  display: flex;
+}
+
+.plants_second_son > a {
+  color: grey;
+  font-weight: bold;
 }
 
 .buyBtn {
@@ -52,4 +60,13 @@ span > span {
 .buyBtn:hover {
   background: #15573F;
   color: white;
+}
+
+.plants_sibilin {
+  margin-left: 46px;
+}
+
+.plants_sibilin > img {
+  margin-right: 6px;
+  margin-bottom: 20px;
 }

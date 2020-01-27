@@ -58,8 +58,8 @@ class Survey3 extends Component {
           }
         </div>
         <div className="Divnavigate survey3_fourth_son">
-          <Link to='/survey2'>Back</Link>
-          <Link onClick={cApi} to='/all'>Próximo</Link>
+          <Link to='/survey2'  className="arrowBack">Back</Link>
+          <Link onClick={cApi} to='/all' className="arroFront">Próximo</Link>
         </div>
         <Switch>
           {/* <Route path='/list' component={() => {<List data={this.state.allPlants}/>}}/> */}
