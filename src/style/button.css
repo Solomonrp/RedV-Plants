@@ -1,21 +1,16 @@
 .btn-clean {
-  /* content:url('./assets/icons/coral/high-sun.svg'); */
-  /* padding: 20px; */
-  /* border: 2px solid red; */
-  /* margin: 40px; */
-  /* padding: 80px; */
-  /* background: black; */
-  /* color: white; */
+  padding: 35px 70px;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  margin: 15px;
 }
 
 .imgbtn1 {
-  /* width: 150px;
-  height: 150px; */
-  /* background-image: url('../assets/icons/coral/low-sun.svg'); */
   width: 60px;
   height: 70px;
   background-repeat: no-repeat;
   background-position: center;
-  margin: auto;
-  border: 1px solid red;
+  margin-top: 15%;
+  margin-bottom: 10px;
 }

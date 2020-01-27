@@ -1,0 +1,128 @@
+body {
+  /* background: white; */
+}
+
+.wrappers{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.wrapper1 {
+  display: inline;
+}
+
+.wrapper1_son {
+  float: left;
+  position: absolute;
+  left: 70px;
+  top: 350px;
+}
+
+.wrapper1_son > img {
+  transform: rotate(270deg);
+  left: -100px;
+  position: absolute;
+  width: 200px;
+  top: -148px
+}
+
+.wrapper1_son > hr {
+  background: grey;
+  width: 0px;
+}
+
+/* .wrappers::before { */
+
+  .tessssssss{
+  content:url('../assets/logo/logo-greenthumb.svg'); /* with class ModalCarrot ??*/
+  position: relative;
+  z-index: 1000;
+  left: -411px;
+  top: -119px;
+  transform: rotate(90deg);
+}
+
+/* .first_son_Wrapper::before { */
+  .testesss{
+  content: "";
+  display: block;
+  height: 30%;
+  width: 1px;
+  left: 75px;
+  background: grey;
+  top: 410px;
+  position: absolute;
+}
+
+.first_son_Wrapper{
+  width: 300px;
+  text-align: initial;
+}
+
+.second_son_Wrapper{
+  width: 300px;
+  height: 390px;
+  text-align: initial;
+  padding: 35px;
+  background: whitesmoke;
+}
+
+.first_son_wrapper_son > h1 {
+  color: #15573F;
+  margin-bottom: 10px;
+}
+
+.first_son_wrapper_son > a {
+  color: grey;
+}
+
+.ul_first_wrapper_son {
+  list-style-type: none;
+}
+
+.ul_first_wrapper_son > li {
+  margin: 10px 0px;
+}
+
+li > a {
+  vertical-align: super;
+  padding-left: 10px;
+  color: grey;
+}
+
+.first_son_second_son_wrapper {
+  border-radius: 5px;
+}
+
+.first_son_second_son_wrapper > p {
+  line-height: 25px;
+  color: grey;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.second_son_second_son_wrapper > label {
+  color: grey;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input_second_son_second_son_wrapper {
+  margin: 10px 0px;
+  border-radius: 20px;
+  border: 1px solid white;
+  padding: 10px 70px;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.send_second_son_second_son_wrapper{
+  padding: 14px 50px;
+  border-radius: 25px;
+  border: 1px solid #15573F;
+  color: #15573F;
+  background: whitesmoke;
+  margin-top: 20px;
+  float: right;
+}

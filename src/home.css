@@ -16,7 +16,7 @@
   padding-top: 50px;
 }
 
-div > div:nth-child(2)  {
+.tittle  {
   font-family: 'Montserrat', sans-serif;
   color: #15573F;
   font-weight: bold;

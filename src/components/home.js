@@ -17,7 +17,7 @@ class Home extends Component {
             <img className='logo' />
           </div>
 
-          <div>
+          <div className="tittle">
             <a>Find your <br /> next green <br /> friend </a>
           </div>
           {

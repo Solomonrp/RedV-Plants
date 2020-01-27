@@ -14,15 +14,15 @@ class Button extends Component {
     }
 
     const imgMain = {
-      // 'background-image': 'url(../assets/icons/coral/low-sun.svg)'
+      'background': this.props.color,
+      'color' : this.props.white
     }
 
     return (
       <React.Fragment>
-        <a className="btn-clean" name={this.props.name} value={this.props.value} onClick={handler}>
-          <img className="imgbtn1" style={imgMain} src={this.props.image} name={this.props.name} teste={this.props.value}/><br />
+        <a className="btn-clean" style={imgMain} name={this.props.name} value={this.props.value} onClick={handler}>
+          <img className="imgbtn1" src={this.props.image} name={this.props.name} teste={this.props.value}/><br />
           {this.props.children}</a>
-        {/* CADA COMPONENTE BOTÃO TER UMA CSS CLASSES COM IMAGEM PARA FAZER O TOUGLE  */}
       </React.Fragment>
     )
   }

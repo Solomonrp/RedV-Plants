@@ -3,15 +3,25 @@
   padding: 0px;
 }
 
+body {
+  background: whitesmoke;
+}
+
 /* .querySelector("#root > div > div > div:nth-child(3)") */
 
 .Divoptions {
   margin: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 
 .Divnavigate > a {
-  margin:50px;
+  margin: 50px 230px;
+  text-decoration: none;
+  border: 1px solid #15573F;
+  color: #15573F;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 13px;
 }

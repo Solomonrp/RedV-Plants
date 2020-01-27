@@ -1,0 +1,55 @@
+.hand {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 70px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.as {
+  background: white;
+  width: 200px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.plants {
+  width: 150px;
+  height: 150px;
+}
+
+h1 {
+  font-size: 60px;
+  color: #15573F;
+}
+
+span {
+  float:left; 
+  color: #15573F;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+span > span {
+  color: grey
+}
+
+.buyBtn {
+  border: 1px solid #15573F;
+  text-decoration: none;
+  color: #15573F;
+  padding: 10px 65px;
+  border-radius: 20px;
+  width: 50px;
+}
+
+.buyBtn:hover {
+  background: #15573F;
+  color: white;
+}

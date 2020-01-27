@@ -5,8 +5,11 @@ import Button from './btn';
 import Img from './img';
 import Sun from '../assets/illustrations/sun.png';
 import HSun from '../assets/icons/coral/high-sun.svg';
+import HWSun from '../assets/icons/white/high-sun.svg';
 import MSun from '../assets/icons/coral/low-sun.svg';
+import MWSun from '../assets/icons/white/low-sun.svg';
 import NSun from '../assets/icons/coral/no-answer.svg';
+import NWSun from '../assets/icons/white/no-answer.svg';
 
 class Survey extends Component {
 
@@ -17,7 +20,7 @@ class Survey extends Component {
   changeBtn = (value) => {
     console.log(value)
     this.setState({
-      btnSelected : value 
+      btnSelected: value
     })
   }
 
@@ -29,29 +32,30 @@ class Survey extends Component {
         <div className='Divoptions'>
           {/* //colocar state para se o botão tivar state 1 mostra o normal e state 2 para o selecionado 
           //Se o botão tivar no state select ele é o único que fica branco */}
-          
+
           {
             this.state.btnSelected === 'high' ?
-              <Button name='sun' image={HSun} value='muita' touch={this.changeBtn} changeState={this.props.changeState}>Teste</Button>
+              <Button name='sun' white='white' color='#FD9872' image={HWSun} value='muita' touch={this.changeBtn} changeState={this.props.changeState}>high</Button>
               :
               <Button name='sun' image={HSun} id='1' value='muita' touch={this.changeBtn} changeState={this.props.changeState}>high</Button>
           }
           {
             this.state.btnSelected === 'low' ?
-              <Button name='sun' image={MSun} value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>Teste2</Button>
+              <Button name='sun' white='white' color='#FD9872' image={MWSun} value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>low</Button>
               :
               <Button name='sun' image={MSun} id='2' value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>low</Button>
           }
           {
             this.state.btnSelected === 'no' ?
-              <Button name='sun' image={NSun} value='media' touch={this.changeBtn} changeState={this.props.changeState}>Teste3</Button>
+              <Button name='sun' white='white' color='#FD9872' image={NWSun} value='media' touch={this.changeBtn} changeState={this.props.changeState}>no</Button>
               :
               <Button name='sun' image={NSun} id='3' value='media' touch={this.changeBtn} changeState={this.props.changeState}>no</Button>
           }
         </div>
         <div className='Divnavigate'>
           <Link to='/'>Back</Link>
-          <Link to='/survey2'>Próximo</Link>
+          <Link to='/survey2'>Próximo
+          </Link>
         </div>
 
         <Switch>
