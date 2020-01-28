@@ -7,8 +7,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 70px;
-  margin-left: 250px;
-  /* margin-right: 250px; */
+  justify-items: center;
 }
 
 .as {
@@ -29,7 +28,7 @@ h1 {
   color: #15573F;
 }
 
-.plants_first_son > div > a {
+.plants_first_sibiling{
   float:left; 
   color: #15573F;
   font-weight: bold;
@@ -46,6 +45,8 @@ h1 {
 .plants_second_son > a {
   color: grey;
   font-weight: bold;
+  margin: 0px 15px;
+  font-size: 18px;
 }
 
 .buyBtn {

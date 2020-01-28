@@ -10,7 +10,9 @@ import MSun from '../assets/icons/coral/low-sun.svg';
 import MWSun from '../assets/icons/white/low-sun.svg';
 import NSun from '../assets/icons/coral/no-answer.svg';
 import NWSun from '../assets/icons/white/no-answer.svg';
-import Arrowl from '../assets/arrow_direita.png'
+import Arrowl from '../assets/arrow_direita.png';
+import logo from '../assets/logo/logo-greenthumb.svg';
+
 
 class Survey extends Component {
 
@@ -25,48 +27,54 @@ class Survey extends Component {
     })
   }
 
+  getData = (event) => {
+    console.log(event);
+  }
+
   render() {
     return (
-      <div>
-        <Img image={Sun} />
-        <h3>First, set the amount of <br /> sunlight your plant willget.</h3>
-        <div className='Divoptions'>
-          {/* //colocar state para se o botão tivar state 1 mostra o normal e state 2 para o selecionado 
-          //Se o botão tivar no state select ele é o único que fica branco */}
-
-          {
-            this.state.btnSelected === 'high' ?
-              <Button name='sun' white='white' color='#FD9872' image={HWSun} value='muita' touch={this.changeBtn} changeState={this.props.changeState}>high</Button>
-              :
-              <Button name='sun' image={HSun} id='1' value='muita' touch={this.changeBtn} changeState={this.props.changeState}>high</Button>
-          }
-          {
-            this.state.btnSelected === 'low' ?
-              <Button name='sun' white='white' color='#FD9872' image={MWSun} value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>low</Button>
-              :
-              <Button name='sun' image={MSun} id='2' value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>low</Button>
-          }
-          {
-            this.state.btnSelected === 'no' ?
-              <Button name='sun' white='white' color='#FD9872' image={NWSun} value='media' touch={this.changeBtn} changeState={this.props.changeState}>no</Button>
-              :
-              <Button name='sun' image={NSun} id='3' value='media' touch={this.changeBtn} changeState={this.props.changeState}>no</Button>
-          }
+      <div className="wrapper1">
+        <div className="wrapper1_son">
+          <img src={logo} />
+          <hr size="250" />
         </div>
-        <div className='Divnavigate'>
-          <Link to='/' className="arrowBack">Back</Link>
-          <Link to='/survey2' className="arroFront">Próximo
-          </Link>
-        </div>
+        <div>
+          <Img image={Sun} />
+          <h3>First, set the amount of <br /> sunlight your plant willget.</h3>
+          <div className='Divoptions'>
+            {
+              this.state.btnSelected === 'high' ?
+                <Button name='sun' white='white' color='#FD9872' image={HWSun} value='high' touch={this.changeBtn} changeState={this.props.changeState}>High sunlight</Button>
+                :
+                <Button name='sun' image={HSun}  value='high' touch={this.changeBtn} changeState={this.props.changeState}>High sunlight</Button>
+            }
+            {
+              this.state.btnSelected === 'low' ?
+                <Button name='sun' white='white' color='#FD9872' image={MWSun} value='low' touch={this.changeBtn} changeState={this.props.changeState}>Low sunlight</Button>
+                :
+                <Button name='sun' image={MSun}  value='low' touch={this.changeBtn} changeState={this.props.changeState}>Low sunlight</Button>
+            }
+            {
+              this.state.btnSelected === 'no' ?
+                <Button name='sun' white='white' color='#FD9872' image={NWSun} value='no' touch={this.changeBtn} changeState={this.props.changeState}>No sunlight</Button>
+                :
+                <Button name='sun' image={NSun}  value='no' touch={this.changeBtn} changeState={this.props.changeState}>No sunlight</Button>
+            }
+          </div>
+          <div className='Divnavigate'>
+            <Link to='/' className="arrowBack">previous</Link>
+            <Link to='/survey2' className="arroFront">next</Link>
+          </div>
 
-        <Switch>
-          {/* <Route path='/survey2' component={Survey2}/> */}
-          {/* <Route path='/survey2' render={() => <Survey2 changeState={this.props.changeState} escolha={'teste props 2'} />} />
+          <Switch>
+            {/* <Route path='/survey2' component={Survey2}/> */}
+            {/* <Route path='/survey2' render={() => <Survey2 changeState={this.props.changeState} escolha={'teste props 2'} />} />
           <Route path='/survey3' render={() => <Survey3 changeState={this.props.changeState} escolha={'teste props 3'} api={this.props.api} />} />
           <Route path='/all' render={() => <List data={this.props.data} api={this.props.api} />} />
           <Route path='/one/:id' render={(props) => <OneItem {...props} />} /> */}
 
-        </Switch>
+          </Switch>
+        </div>
       </div>
     )
   }

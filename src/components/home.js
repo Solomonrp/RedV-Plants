@@ -23,8 +23,10 @@ class Home extends Component {
           {
             console.log(this.props.changeState)
           }
+        <div>
 
-          <Link to='/survey'>Start Teste</Link>
+        </div>
+          <Link className="startBtn" to='/survey'>start quizz</Link>
         </div>
 
         <Switch>

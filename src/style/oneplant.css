@@ -61,8 +61,9 @@ body {
 }
 
 .second_son_Wrapper{
-  width: 300px;
-  height: 390px;
+  /* width: 300px; */
+  width: 314px;
+  height: 422px;
   text-align: initial;
   padding: 35px;
   background: whitesmoke;
@@ -126,4 +127,33 @@ li > a {
   background: whitesmoke;
   margin-top: 20px;
   float: right;
+}
+
+.disableSon {
+  pointer-events: none;
+}
+
+.envelope {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.confirmationEmail {
+  text-align: center;
+}
+
+.error {
+  color:red;
+  font-size: 12px;
+  display: relative;
+}
+
+.errors {
+  color:red;
+}
+
+.errorInput {
+  color:red;
+  border: 1px solid red;
 }

@@ -22,19 +22,19 @@ class List extends Component {
   render() {
 
     const sun = {
-      high: <img src={HWSun} width="25px;" height="25px" />,
-      medium: <img src={LWSun} width="25px;" height="25px" />,
-      no: <img src={NWSun} width="25px;" height="25px" />
+      high: <img src={HWSun} width="20px;" height="20px" />,
+      medium: <img src={LWSun} width="20px;" height="20px" />,
+      no: <img src={NWSun} width="20px;" height="20px" />
     }
     const water = {
-      daily:  <img src={HWDrops} width="25px;" height="25px" />,
-      regularly:  <img src={MWDrops} width="25px;" height="25px" />,
-      rarely: <img src={NWDrops} width="25px;" height="25px" />
+      daily:  <img src={HWDrops} width="20px;" height="20px" />,
+      regularly:  <img src={MWDrops} width="20px;" height="20px" />,
+      rarely: <img src={NWDrops} width="20px;" height="20px" />
     }
 
     const pets = {
-      true: <img src={Toxic} width="25px;" height="25px" />,
-      false: <img src={Dog} width="25px;" height="25px" /> 
+      true: <img src={Toxic} width="20px;" height="20px" />,
+      false: <img src={Dog} width="20px;" height="20px" /> 
     }
 
     return (
@@ -51,7 +51,7 @@ class List extends Component {
                 <br />
                 <div className="plants_first_son">
                   <div>
-                  <a>{plant.name}</a>
+                    <a className="plants_first_sibiling">{plant.name}</a>
                   </div>
                   {/* <br /> */}
                   <div className="plants_second_son">

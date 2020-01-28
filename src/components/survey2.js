@@ -20,9 +20,9 @@ class Survey2 extends Component {
   }
 
   changeBtn = (value) => {
-    console.log(value)
+    console.log(value.toLowerCase())
     this.setState({
-      btnSelected: value
+      btnSelected: value.toLowerCase()
     })
   }
   
@@ -34,21 +34,21 @@ class Survey2 extends Component {
         <div className="Divoptions">
           {
             this.state.btnSelected === 'daily' ?
-              <Button name='water' white='white' color='#7BAF9E' image={HWDrops} value='muita' touch={this.changeBtn} changeState={this.props.changeState}>daily</Button>
+              <Button name='water' white='white' color='#7BAF9E' image={HWDrops} value='daily' touch={this.changeBtn} changeState={this.props.changeState}>Daily</Button>
               :
-              <Button name='water' image={HDrops}  value='muita' touch={this.changeBtn} changeState={this.props.changeState}>daily</Button>
+              <Button name='water' image={HDrops}  value='daily' touch={this.changeBtn} changeState={this.props.changeState}>Daily</Button>
           }
           {
             this.state.btnSelected === 'regularly' ?
-              <Button name='water' white='white' color='#7BAF9E' image={MWDrops} value='media' touch={this.changeBtn} changeState={this.props.changeState}>regularly</Button>
+              <Button name='water' white='white' color='#7BAF9E' image={MWDrops} value='regularly' touch={this.changeBtn} changeState={this.props.changeState}>Regularly</Button>
               :
-              <Button name='water' image={MDrops}  value='media' touch={this.changeBtn} changeState={this.props.changeState}>regularly</Button>
+              <Button name='water' image={MDrops}  value='regularly' touch={this.changeBtn} changeState={this.props.changeState}>Regularly</Button>
           }
           {
             this.state.btnSelected === 'rarely' ?
-              <Button name='water' white='white' color='#7BAF9E' image={NWDrops} value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>rarely</Button>
+              <Button name='water' white='white' color='#7BAF9E' image={NWDrops} value='rarely' touch={this.changeBtn} changeState={this.props.changeState}>Rarely</Button>
               :
-              <Button name='water' image={NDrops} value='pouca' touch={this.changeBtn} changeState={this.props.changeState}>rarely</Button>
+              <Button name='water' image={NDrops} value='rarely' touch={this.changeBtn} changeState={this.props.changeState}>Rarely</Button>
           }
 
 
@@ -56,8 +56,8 @@ class Survey2 extends Component {
         </div>
 
         <div className="Divnavigate">
-          <Link to='/survey' className="arrowBack">Back</Link>
-          <Link to='/survey3' className="arroFront">Próximo</Link>
+          <Link to='/survey' className="arrowBack">previous</Link>
+          <Link to='/survey3' className="arroFront">next</Link>
         </div>
 
         <Switch>

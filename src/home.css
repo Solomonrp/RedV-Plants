@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .main {
   background-image: url('./assets/illustrations/illustration-home.png');
-  width: 100%;
-  height: 550px;
+  width: 90%;
+  height: 660px;
   background-position: right;
   background-repeat: no-repeat;
-  /* background-size: cover; */
   position: relative;
 }
 
@@ -19,14 +23,27 @@
 .tittle  {
   font-family: 'Montserrat', sans-serif;
   color: #15573F;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 50px;
   padding-top: 100px;
   padding-bottom: 30px;
+  text-align: initial;
 }
 
 .logo {
   content:url('./assets/logo/logo-greenthumb.svg');
+  width: 72%;
+  float: left;
+}
+
+.startBtn {
+  float: left;
+  border: 1px solid #15573F;
+  background: #15573F;
+  text-decoration: none;
+  color: white;
+  padding: 11px 31px;
+  border-radius: 25px;
 }
 
 @media (min-width: 1500px) { 

@@ -10,26 +10,58 @@ import NWDrops from '../assets/icons/grey/one-drop.png';
 import Dog from '../assets/icons/grey/pet.svg';
 import Toxic from '../assets/icons/grey/toxic.svg';
 import logo from '../assets/logo/logo-greenthumb.svg';
+import send from '../assets/illustrations/envelop.png'
 
 class OneItem extends Component {
 
   state = {
-    data: { "id": 1, "name": "Euphorbia eritrea", "sun": "medium", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/euphorbia-eritrea.jpg", "price": 25, "toxicity": false },
+    data: {},
+    // data: { "id": 1, "name": "Euphorbia eritrea", "sun": "medium", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/euphorbia-eritrea.jpg", "price": 25, "toxicity": false },
+    form: 0,
+    email: null,
+    name: null,
+    errorEmail: ''
   }
 
   componentDidMount() {
     console.log(this.props.match.params.id);
-    // axios.get(`https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service/plant?id=${this.props.match.params.id}`)
-    //   .then(response => {
-    //     this.setState({ data: response.data })
-    //   })
+    axios.get(`https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service/plant?id=${this.props.match.params.id}`)
+      .then(response => {
+        this.setState({ data: response.data })
+      })
+    this.props.changeState('id',this.props.match.params.id);
     console.log(this.state.data);
   }
 
+  validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
 
+  handleformSubmit = (event) => {
+    event.preventDefault();
+    this.props.send();
+    this.setState({ form: '1' })
+    let errors = '';
+    errors = this.validEmailRegex.test(this.state.email)
+      ? ''
+      : 'Please provide a valid e-mail'
+    this.setState({
+      errorEmail: errors
+    })
+    console.log(errors)
+  }
 
   render() {
+
+    const sendForm = (event) => {
+      this.setState({
+        email: event.target.value,
+      })
+      if(this.state.errorEmail.length > 0) {
+        console.log('erro');
+      }else {
+        this.props.changeState(event.target.name, event.target.value);
+      }
+    }
 
     document.body.style = 'background: white;';
 
@@ -71,18 +103,44 @@ class OneItem extends Component {
             </ul>
           </div>
           <div className="second_son_Wrapper">
-            <div className="first_son_second_son_wrapper">
-              <h1>Nice pick!</h1>
-              <p>Tell us your name and e-mail <br /> and we will get in touch <br />regarding your order ;) </p>
-            </div>
-            <form className="second_son_second_son_wrapper">
-              <label>Name</label><br />
-              <input className='input_second_son_second_son_wrapper' type='text' placeholder='Crazy Plant Person' />
-              <br />
-              <label>E-mail</label><br />
-              <input className='input_second_son_second_son_wrapper' type='text' placeholder='plantperson@email.com' />
-              <input className="send_second_son_second_son_wrapper" type='submit' value="send" />
-            </form>
+            {this.state.form === 0 ?
+              <div>
+                <div className="first_son_second_son_wrapper">
+                  <h1>Nice pick!</h1>
+                  <p>Tell us your name and e-mail <br /> and we will get in touch <br />regarding your order ;) </p>
+                </div>
+                <form className="second_son_second_son_wrapper" onSubmit={this.handleformSubmit}>
+                  
+                  <label>Name</label><br />
+                  <input className='input_second_son_second_son_wrapper' name='name' type='text' placeholder='Crazy Plant Person' onChange={sendForm} />
+                  <br />
+                  {
+                    this.state.errorEmail.length > 0 ?
+                      <div>
+                        <label className="errors">E-mail</label>
+                        <input className='input_second_son_second_son_wrapper errorInput' name='email' type='text' value={this.state.email} onChange={sendForm} />
+                        <span className='error'>{this.state.errorEmail}</span>
+                      </div>
+                      :
+                      <div>
+                        <label>E-mail</label> <br />
+                        <input className='input_second_son_second_son_wrapper' name='email' type='text' placeholder='plantperson@email.com' onChange={sendForm} />
+                      </div>
+                  }
+                  <input className="send_second_son_second_son_wrapper" type='submit' value="send" />
+                </form>
+              </div>
+              :
+              <div>
+                <div className="first_son_second_son_wrapper">
+                  <h1>Thank you!</h1>
+                  <p className='confirmationEmail'>You will hear from us soon. Please  <br /> check your e-mail! </p>
+                </div>
+                <div>
+                  <img className="envelope" src={send} width="170px" />
+                </div>
+              </div>
+            }
           </div>
         </div>
       </div>

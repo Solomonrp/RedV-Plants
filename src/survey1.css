@@ -45,8 +45,8 @@ body {
 }
 
 .arroFront {
-  background:url('./assets/arrow_esquerda.png') no-repeat;
-  background-position: calc(100% - 10px) center;
+  background:url('./assets/arrow_esquerda.png') no-repeat 10px center;
+  /* background-position: calc(100% - 10px) center; */
   cursor: pointer;
   background-size: 28px;
 }

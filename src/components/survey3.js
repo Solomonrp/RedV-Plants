@@ -7,9 +7,9 @@ import '../style/survey3.css';
 import Button from './btn';
 import Img from './img';
 import Dog from '../assets/illustrations/dog.png'
-import MDog from '../assets/icons/grey/pet.svg';
+import MDog from '../assets/icons/coral/pet.svg';
 import MWDog from '../assets/icons/white/pet.svg';
-import NDog from '../assets/icons/grey/no-answer.svg';
+import NDog from '../assets/icons/coral/no-answer.svg';
 import NWDog from '../assets/icons/white/no-answer.svg';
 
 class Survey3 extends Component {
@@ -20,7 +20,7 @@ class Survey3 extends Component {
   }
 
   changeBtn = (value) => {
-    console.log(value)
+    console.log('aqui',value)
     this.setState({
       btnSelected: value
     })
@@ -46,20 +46,20 @@ class Survey3 extends Component {
         <div className="Divoptions survey3_third_son">
           {
             this.state.btnSelected === 'true' ?
-              <Button name='pet' white='white' color='#FD9872' image={MWDog} value='Sim' touch={this.changeBtn} changeState={this.props.changeState}>true</Button>
+              <Button name='pet' white='white' color='#FD9872' image={MWDog} value='true' touch={this.changeBtn} changeState={this.props.changeState}>Yes</Button>
               :
-              <Button name='pet' image={MDog} value='muita' touch={this.changeBtn} changeState={this.props.changeState}>true</Button>
+              <Button name='pet' image={MDog} value='true' touch={this.changeBtn} changeState={this.props.changeState}>Yes</Button>
           }
           {
             this.state.btnSelected === 'false' ?
-              <Button name='pet' white='white' color='#FD9872' image={NWDog} value='Não' touch={this.changeBtn} changeState={this.props.changeState}>false</Button>
+              <Button name='pet' white='white' class="survey3_no_btn" color='#FD9872' image={NWDog} value='false' touch={this.changeBtn} changeState={this.props.changeState}>No/They don't care</Button>
               :
-              <Button name='pet' image={NDog} value='media' touch={this.changeBtn} changeState={this.props.changeState}>false</Button>
+              <Button name='pet' image={NDog} class="survey3_no_btn" value='false' touch={this.changeBtn} changeState={this.props.changeState}>No/They don't care</Button>
           }
         </div>
         <div className="Divnavigate survey3_fourth_son">
-          <Link to='/survey2'  className="arrowBack">Back</Link>
-          <Link onClick={cApi} to='/all' className="arroFront">Próximo</Link>
+          <Link to='/survey2'  className="arrowBack">previous</Link>
+          <Link onClick={cApi} to='/all' className="arroFront">finish</Link>
         </div>
         <Switch>
           {/* <Route path='/list' component={() => {<List data={this.state.allPlants}/>}}/> */}
