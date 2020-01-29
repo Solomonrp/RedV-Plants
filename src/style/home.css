@@ -8,7 +8,7 @@ body {
 }
 
 .main {
-  background-image: url('./assets/illustrations/illustration-home.png');
+  background-image: url('../assets/illustrations/illustration-home.png');
   width: 90%;
   height: 660px;
   background-position: right;
@@ -32,7 +32,7 @@ body {
 }
 
 .logo {
-  content:url('./assets/logo/logo-greenthumb.svg');
+  content:url('../assets/logo/logo-greenthumb.svg');
   width: 72%;
   float: left;
 }
@@ -55,7 +55,7 @@ body {
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
   .main {
-    background-image: url(/static/media/illustration-home-mobile.a1cc00d9.png);
+    background-image: url('../assets/illustrations/illustration-home-mobile.png');
     width: 88%;
     height: 842px;
     background-position: bottom;

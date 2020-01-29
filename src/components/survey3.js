@@ -33,6 +33,9 @@ class Survey3 extends Component {
 
     return (
       <div className="dog_survey">
+        <div className='logo_father logo_fatherS'>
+          <img className='logo' />
+        </div>
         <Img image={Dog} />
         <div className="survey3_secod_son">
           <h2>Do you have pets? Do they <b>chew</b> plants?</h2>

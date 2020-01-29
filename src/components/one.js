@@ -88,6 +88,9 @@ class OneItem extends Component {
 
     return (
       <div className="wrapper1">
+        <div className='logo_father logo_fatherS'>
+          <img className='logo' />
+        </div>
         <div className="wrapper1_son">
           <img src={logo} />
           <hr size="250" />

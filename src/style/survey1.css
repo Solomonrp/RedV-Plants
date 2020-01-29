@@ -27,13 +27,13 @@ body {
 }
 
 .arrowBack {
-  background:url('./assets/arrow_direita.png') no-repeat 10px center;
+  background:url('../assets/arrow_direita.png') no-repeat 10px center;
   cursor: pointer;
   background-size: 28px;
 }
 
 .arroFront {
-  background:url('./assets/arrow_esquerda.png') no-repeat 10px center;
+  background:url('../assets/arrow_esquerda.png') no-repeat 10px center;
   cursor: pointer;
   background-size: 28px;
 }
@@ -43,13 +43,17 @@ body {
     display: none;
   }
 
+  .logo_fatherS > img {
+    width: 100%;
+  } 
+
   .Divoptions {
     margin: 40px;
     display: block;
 }
   
   .Divnavigate {
-    margin-top: 72px;
+    margin-top: 1px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
   }
@@ -61,7 +65,7 @@ body {
     border: 1px solid #15573F;
     border-radius: 20px;
     font-size: 13px;
-    padding: 10px 66px;
+    padding: 10px 60px;
     margin: 30px 125px;
     color: #15573F;
     margin-bottom: 26px;

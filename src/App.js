@@ -6,7 +6,7 @@ import Survey2 from './components/survey2';
 import Survey3 from './components/survey3';
 import List from './components/listall';
 import OneItem from './components/one';
-import './App.css';
+import './style/App.css';
 import axios from 'axios';
 
 class App extends Component {
@@ -19,7 +19,6 @@ class App extends Component {
     id: '',
     formStatus: 0,
     allPlants: []
-    // allPlants: [{ "id": 1, "name": "Euphorbia eritrea", "sun": "high", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/euphorbia-eritrea.jpg", "price": 25, "toxicity": false }, { "id": 2, "name": "Succulent Bowl", "sun": "high", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg", "price": 30, "toxicity": false }, { "id": 3, "name": "Bunny ears cacti", "sun": "high", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/bunny-ears-cacti.jpg", "price": 20, "toxicity": false }, { "id": 4, "name": "Ficus lyrata", "sun": "high", "water": "regularly", "url": "https://front-static-recruitment.s3.amazonaws.com/ficus-lyrata.jpg", "price": 30, "toxicity": false }]
   }
 
   changeState = (name, value) => {
@@ -53,11 +52,6 @@ class App extends Component {
       }).catch (erro => {
         console.log(erro);
       })
-
-    // let res = axios.get(`https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service?sun=${this.state.sun}&water=${this.state.water}&pets=${this.state.pet}`);
-    // let { data } = res.data;
-    // this.setState({ allPlants: data })
-    console.log(this.state.allPlants)
   }
 
   render() {

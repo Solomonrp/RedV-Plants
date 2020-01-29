@@ -39,6 +39,9 @@ class List extends Component {
 
     return (
       <div>
+        <div className='logo_father logo_fatherS'>
+          <img className='logo' />
+        </div>
         <img className='hand' src={Hand} />
 
         <h1>Our picks for you</h1>

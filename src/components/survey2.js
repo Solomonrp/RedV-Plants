@@ -29,6 +29,9 @@ class Survey2 extends Component {
   render() {
     return (
       <div>
+        <div className='logo_father logo_fatherS'>
+          <img className='logo' />
+        </div>
         <Img image={Water}/>
         <h3>How often fo you want to <br />water your plant?</h3>
         <div className="Divoptions">

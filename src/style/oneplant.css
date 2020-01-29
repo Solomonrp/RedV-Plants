@@ -137,6 +137,9 @@ li > a {
     display: contents;
 }
 
+.logo_fatherS > img {
+  margin-bottom: 24px;
+}
 
 .first_son_Wrapper {
   margin-left: 40px;
@@ -161,6 +164,7 @@ li > a {
   width: 287px;
   margin-left: 0px;
   margin-top: 20px;
+  font-size: 37px;
 }
 
 p br {
@@ -169,6 +173,19 @@ p br {
 
 .first_son_second_son_wrapper > p {
   width: 232px;
+  margin-left: 44px;
+}
+
+.envelope {
+  margin-left: 78px;
+}
+
+.first_son_second_son_wrapper > h1{
+  font-size: 38px;
+}
+
+.first_son_second_son_wrapper > a{
+  font-size: 24px;
 }
 
 }

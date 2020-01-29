@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import '../survey1.css';
+import '../style/survey1.css';
 import Button from './btn';
 import Img from './img';
 import Sun from '../assets/illustrations/sun.png';
@@ -34,6 +34,9 @@ class Survey extends Component {
   render() {
     return (
       <div className="wrapper1">
+        <div className='logo_father logo_fatherS'>
+          <img className='logo' />
+        </div>
         <div className="wrapper1_son">
           <img src={logo} />
           <hr size="250" />

@@ -5,7 +5,8 @@ import Survey2 from './survey2';
 import Survey3 from './survey3';
 import List from './listall';
 import OneItem from './one';
-import '../home.css';
+import '../style/home.css';
+
 
 
 class Home extends Component {
