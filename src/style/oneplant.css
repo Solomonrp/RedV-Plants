@@ -138,4 +138,37 @@ li > a {
 }
 
 
+.first_son_Wrapper {
+  margin-left: 40px;
+}
+
+.second_son_Wrapper {
+  width: 340px;
+  height: 442px;
+}
+
+.send_second_son_second_son_wrapper {
+  padding: 14px 136px;
+  color: white;
+  background: #15573F;
+  margin-top: 17px;
+  display: block;
+  margin-right: 34px;
+}
+
+
+.first_son_wrapper_son > h1 {
+  width: 287px;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+p br {
+  display: none;
+}
+
+.first_son_second_son_wrapper > p {
+  width: 232px;
+}
+
 }
