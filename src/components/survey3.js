@@ -28,12 +28,7 @@ class Survey3 extends Component {
 
   render() {
     const cApi = () => {
-      console.log('foi')
       this.props.api();
-      // axios.get(`https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service?sun=${this.state.sun}&water=${this.state.water}&pets=${this.state.pet}`)
-      // .then(response => {
-      //     this.setState({allPlants: response.data})
-      // })
     }
 
     return (
@@ -41,7 +36,9 @@ class Survey3 extends Component {
         <Img image={Dog} />
         <div className="survey3_secod_son">
           <h2>Do you have pets? Do they <b>chew</b> plants?</h2>
-          <a>We are asking because some plants can be toxic for your buddy. </a>
+          <div className="survey3_secod_son_sib">
+            <a>We are asking because some plants can be toxic for your buddy. </a>
+          </div>
         </div>
         <div className="Divoptions survey3_third_son">
           {
@@ -62,7 +59,6 @@ class Survey3 extends Component {
           <Link onClick={cApi} to='/all' className="arroFront">finish</Link>
         </div>
         <Switch>
-          {/* <Route path='/list' component={() => {<List data={this.state.allPlants}/>}}/> */}
           <Route path='/all' component={() => <List data={this.props.data} />} />
         </Switch>
       </div>

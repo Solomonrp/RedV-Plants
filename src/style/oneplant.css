@@ -1,6 +1,3 @@
-body {
-  /* background: white; */
-}
 
 .wrappers{
   display: flex;
@@ -32,36 +29,12 @@ body {
   width: 0px;
 }
 
-/* .wrappers::before { */
-
-  .tessssssss{
-  content:url('../assets/logo/logo-greenthumb.svg'); /* with class ModalCarrot ??*/
-  position: relative;
-  z-index: 1000;
-  left: -411px;
-  top: -119px;
-  transform: rotate(90deg);
-}
-
-/* .first_son_Wrapper::before { */
-  .testesss{
-  content: "";
-  display: block;
-  height: 30%;
-  width: 1px;
-  left: 75px;
-  background: grey;
-  top: 410px;
-  position: absolute;
-}
-
 .first_son_Wrapper{
   width: 300px;
   text-align: initial;
 }
 
 .second_son_Wrapper{
-  /* width: 300px; */
   width: 314px;
   height: 422px;
   text-align: initial;
@@ -156,4 +129,13 @@ li > a {
 .errorInput {
   color:red;
   border: 1px solid red;
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .wrappers {
+    display: contents;
+}
+
+
 }

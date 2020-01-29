@@ -20,8 +20,10 @@ class OneItem extends Component {
     form: 0,
     email: null,
     name: null,
-    errorEmail: ''
+    errorEmail: '',
+    send: 1
   }
+
 
   componentDidMount() {
     console.log(this.props.match.params.id);
@@ -39,15 +41,18 @@ class OneItem extends Component {
   handleformSubmit = (event) => {
     event.preventDefault();
     this.props.send();
-    this.setState({ form: '1' })
     let errors = '';
     errors = this.validEmailRegex.test(this.state.email)
-      ? ''
-      : 'Please provide a valid e-mail'
+    ? ''
+    : 'Please provide a valid e-mail'
+    if(errors === ''){
+      this.setState({ form: '1' })
+    }
     this.setState({
-      errorEmail: errors
+      errorEmail: errors,
     })
     console.log(errors)
+    console.log('form',this.props.formStatus)
   }
 
   render() {

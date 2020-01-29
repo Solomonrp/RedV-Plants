@@ -25,3 +25,45 @@
 .survey3_fourth_son > a {
   margin: 50px 76px;
 }
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .survey3_secod_son{
+    width: 319px;
+  }
+  
+  .survey3_secod_son > h2 {
+    width: 326px;
+    margin-left: 15%;
+  }
+  
+  .survey3_secod_son_sib {
+    color: gray;
+    margin-left: 59px;
+    width: 289px;
+  }
+
+  .survey3_third_son {
+    margin: 0px 0px;
+  }
+
+  #true {
+    padding: 35px 101px;
+    background: white;
+    color: black;
+    border-radius: 4px;
+    margin: 0px;
+  }
+
+  #true > img {
+
+  }
+
+  
+  .survey3_fourth_son > a {
+    margin: 50px 119px;
+  }
+
+
+
+
+}

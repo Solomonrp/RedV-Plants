@@ -12,7 +12,7 @@
 
 .as {
   background: white;
-  width: 200px;
+  width: 202px;
   margin-bottom: 40px;
   padding: 20px;
   border-radius: 5px;
@@ -70,4 +70,21 @@ h1 {
 .plants_sibilin > img {
   margin-right: 6px;
   margin-bottom: 20px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .wrapper {
+    display: block;
+    margin-left: 84px;
+  }
+
+  .plants_first_sibiling {
+    margin: 0px 20px;
+}
+
+  h1 {
+    width: 287px;
+    margin-left: 63px;
+  }
+
 }

@@ -17,6 +17,7 @@ class App extends Component {
     name: '',
     email: '',
     id: '',
+    formStatus: 0,
     allPlants: []
     // allPlants: [{ "id": 1, "name": "Euphorbia eritrea", "sun": "high", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/euphorbia-eritrea.jpg", "price": 25, "toxicity": false }, { "id": 2, "name": "Succulent Bowl", "sun": "high", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/succulent-bowl.jpg", "price": 30, "toxicity": false }, { "id": 3, "name": "Bunny ears cacti", "sun": "high", "water": "rarely", "url": "https://front-static-recruitment.s3.amazonaws.com/bunny-ears-cacti.jpg", "price": 20, "toxicity": false }, { "id": 4, "name": "Ficus lyrata", "sun": "high", "water": "regularly", "url": "https://front-static-recruitment.s3.amazonaws.com/ficus-lyrata.jpg", "price": 30, "toxicity": false }]
   }
@@ -36,9 +37,11 @@ class App extends Component {
       "name": this.state.name,
       "email": this.state.email,
       "id": this.state.id
-    }).then ( resp => {
+    }
+    ).then ( resp => {
       console.log(resp);
-    }).catch (error => {
+    }).then (status => this.setState({formStatus : 1}))
+    .catch (error => {
       console.log(error);
     })
   }
@@ -66,7 +69,7 @@ class App extends Component {
           <Route path='/survey2' render={() => <Survey2 changeState={this.changeState} escolha={'teste props 2'} />} />
           <Route path='/survey3' render={() => <Survey3 changeState={this.changeState} escolha={'teste props 3'} api={this.callApi} />} />
           <Route path='/all' render={() => <List data={this.state.allPlants} api={this.callApi} />} />
-          <Route path='/one/:id' render={(props) => <OneItem {...props} changeState={this.changeState} send={this.sendForm} />} />
+          <Route path='/one/:id' render={(props) => <OneItem {...props} changeState={this.changeState} send={this.sendForm} formStatus={this.state.formStatus} />} />
         </Switch>
       </div>
     )
