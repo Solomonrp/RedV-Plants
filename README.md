@@ -2,6 +2,7 @@
 
 Para executar o projeto deve rodar o comando abaixo no diretorio:
 
+### `yarn install`
 ### `yarn start`
 
 Abra [http://localhost:3000](http://localhost:3000) para ver o projeto.
